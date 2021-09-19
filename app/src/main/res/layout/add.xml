@@ -28,13 +28,13 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            style="@style/Widget.MaterialComponents.Toolbar"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -60,22 +60,24 @@
                     android:layout_height="48dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="72dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical|right"
+                        android:gravity="center_vertical"
                         android:paddingRight="8dp"
                         android:text="@string/secret"
                         android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/secret"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ234567="
-                        android:hint="(Base32)"
-                        android:inputType="textVisiblePassword|textCapCharacters|textNoSuggestions"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Base32"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/secret"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ234567="
+                            android:inputType="textVisiblePassword|textCapCharacters|textNoSuggestions" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </TableRow>
 
                 <TableRow
@@ -83,9 +85,9 @@
                     android:layout_height="48dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="72dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical|right"
+                        android:gravity="center_vertical"
                         android:paddingRight="8dp"
                         android:text="@string/type"
                         android:textStyle="bold" />
@@ -118,9 +120,9 @@
                     android:layout_height="48dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="72dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical|right"
+                        android:gravity="center_vertical"
                         android:paddingRight="8dp"
                         android:text="@string/digits"
                         android:textStyle="bold" />
@@ -167,9 +169,9 @@
                     android:layout_height="48dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="72dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical|right"
+                        android:gravity="center_vertical"
                         android:paddingRight="8dp"
                         android:text="@string/algorithm"
                         android:textStyle="bold" />
@@ -177,9 +179,10 @@
                     <Spinner
                         android:id="@+id/algorithm"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="36dp"
                         android:layout_weight="1"
-                        android:entries="@array/algorithms" />
+                        android:entries="@array/algorithms"
+                        style="@style/Widget.AppCompat.Spinner"/>
                 </TableRow>
 
                 <TableRow
@@ -187,20 +190,23 @@
                     android:layout_height="48dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="72dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical|right"
+                        android:gravity="center_vertical"
                         android:paddingRight="8dp"
                         android:text="@string/interval"
                         android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/interval"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:inputType="number"
-                        android:text="30" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/interval"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:text="30" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </TableRow>
 
                 <TableRow

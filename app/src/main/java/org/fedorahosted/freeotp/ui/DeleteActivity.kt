@@ -2,6 +2,7 @@ package org.fedorahosted.freeotp.ui
 
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -24,6 +25,10 @@ class DeleteActivity : AppCompatActivity() {
 
         binding = DeleteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val params: WindowManager.LayoutParams = window.attributes
+        params.width = WindowManager.LayoutParams.FILL_PARENT
+        window.attributes = params as WindowManager.LayoutParams
 
         lifecycleScope.launch {
             val tokenId = intent.getLongExtra(EXTRA_TOKEN_ID, 0L)

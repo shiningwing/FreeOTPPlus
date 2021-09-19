@@ -28,7 +28,8 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            style="@style/Widget.MaterialComponents.Toolbar"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
@@ -38,9 +39,11 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/space_3"
+        android:layout_marginBottom="4dp"
         android:layout_marginStart="@dimen/space_3"
         android:layout_marginEnd="@dimen/space_3"
-        android:text="@string/about_version" />
+        android:text="@string/about_version"
+        android:textColor="@color/material_on_background_emphasis_high_type"/>
 
     <TextView
         android:layout_width="match_parent"

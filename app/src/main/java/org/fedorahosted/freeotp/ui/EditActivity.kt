@@ -87,6 +87,9 @@ class EditActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding = EditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

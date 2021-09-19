@@ -27,24 +27,38 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ScanTokenActivity" />
-        <activity android:name=".ui.AboutActivity" />
+        <activity
+            android:name=".ui.ScanTokenActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="@string/about_freeotp"
+            android:parentActivityName=".ui.MainActivity"
+            android:exported="false"/>
         <activity
             android:name=".ui.AddActivity"
             android:label="@string/add_token"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".ui.MainActivity"
+            android:exported="false"/>
         <activity
             android:name=".ui.DeleteActivity"
             android:label="@string/delete_question"
-            android:theme="@style/DialogTheme" />
+            android:theme="@style/DialogTheme"
+            android:exported="false"/>
         <activity
             android:name=".ui.EditActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:label="@string/edit"
+            android:parentActivityName=".ui.MainActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false"/>
         <activity
             android:name=".ui.MainActivity"
             android:clearTaskOnLaunch="true"
             android:label="@string/app_name"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:fitsSystemWindows="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

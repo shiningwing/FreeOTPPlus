@@ -44,6 +44,7 @@ class AboutActivity : AppCompatActivity() {
         super.onStart()
 
         setSupportActionBar(findViewById(R.id.toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val res = resources
         val aboutVersion: TextView = findViewById(R.id.about_version)
 

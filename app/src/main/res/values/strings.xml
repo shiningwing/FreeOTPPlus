@@ -32,7 +32,7 @@
 
     <string name="error_camera_open">Error while opening camera!</string>
 
-    <string name="delete_summary">This is your last chance: if you delete this token, it will be gone forever. It will not be disabled on the server.</string>
+    <string name="delete_summary">If you delete this token, it will be gone forever. It will not be disabled on the server.</string>
     <string name="delete_question">Delete this token?</string>
     <string name="import_text">Import</string>
     <string name="export_text">Export</string>

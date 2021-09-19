@@ -28,92 +28,114 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            style="@style/Widget.MaterialComponents.Toolbar"/>
     </com.google.android.material.appbar.AppBarLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical">
         <include layout="@layout/metadata" />
 
-        <TextView
-            android:id="@+id/token_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Token details"/>
-        <TextView
-            android:id="@+id/algorithm_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/algorithm"/>
-        <TextView
-            android:id="@+id/algorithm"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:textIsSelectable="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
-        <TextView
-            android:id="@+id/digits_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/digits"/>
-        <TextView
-            android:id="@+id/digits"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:textIsSelectable="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
-        <TextView
-            android:id="@+id/secret_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/secret"/>
-        <TextView
-            android:id="@+id/secret"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:textIsSelectable="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
-        <TextView
-            android:id="@+id/interval_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/interval"/>
-        <TextView
-            android:id="@+id/interval"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:textIsSelectable="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
-        <Button
-            android:id="@+id/remove_user_token_image"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/remove_user_token_image" />
-        <Button
-            android:id="@+id/restore"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:enabled="false"
-            android:text="@string/restore_defaults" />
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/token_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Token details"
+                style="@style/TextAppearance.MaterialComponents.Body1"/>
+            <TextView
+                android:id="@+id/algorithm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/algorithm"
+                style="@style/TextAppearance.MaterialComponents.Body2"/>
+            <TextView
+                android:id="@+id/algorithm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+            <TextView
+                android:id="@+id/digits_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/digits"
+                style="@style/TextAppearance.MaterialComponents.Body2"/>
+            <TextView
+                android:id="@+id/digits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+            <TextView
+                android:id="@+id/secret_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/secret"
+                style="@style/TextAppearance.MaterialComponents.Body2"/>
+            <TextView
+                android:id="@+id/secret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+            <TextView
+                android:id="@+id/interval_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/interval"
+                style="@style/TextAppearance.MaterialComponents.Body2"/>
+            <TextView
+                android:id="@+id/interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+            <Button
+                android:id="@+id/remove_user_token_image"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/remove_user_token_image"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button
+                android:id="@+id/restore"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:enabled="false"
+                android:text="@string/restore_defaults"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
     </LinearLayout>
 
     <View style="@style/Divider" />

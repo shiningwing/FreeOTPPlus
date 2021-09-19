@@ -5,13 +5,12 @@
         android:id="@+id/issuer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="4dp"
+        android:paddingTop="8dp"
         android:ellipsize="end"
         android:gravity="start|center"
         android:singleLine="true"
         android:text="@string/issuer_hint"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        style="@style/TextAppearance.MaterialComponents.Caption"/>
 
     <TextView
         android:id="@+id/label"
@@ -21,6 +20,5 @@
         android:gravity="start|center"
         android:singleLine="true"
         android:text="@string/label_hint"
-        android:textSize="12sp"
-        android:textStyle="normal" />
+        style="@style/TextAppearance.MaterialComponents.Caption" />
 </merge>
