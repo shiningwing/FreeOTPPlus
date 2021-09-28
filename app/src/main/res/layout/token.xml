@@ -28,6 +28,7 @@
     android:elevation="0dp"
     app:cardCornerRadius="0dp"
     app:cardElevation="0dp"
+    app:strokeWidth="0dp"
     android:background="?android:selectableItemBackground">
     <ImageView
         android:id="@+id/image"

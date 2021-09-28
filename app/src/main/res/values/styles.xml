@@ -1,12 +1,15 @@
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primary_dark</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="android:popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!--<item name="colorPrimary">@color/primary</item>-->
+        <!--<item name="colorPrimaryDark">@color/primary_dark</item>-->
+        <!--<item name="colorSecondary">@color/secondary</item>-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:popupMenuStyle">@style/Widget.Material3.PopupMenu</item>
+        <item name="android:toolbarStyle">@style/Widget.Material3.Toolbar</item>
     </style>
 
-    <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+    <style name="DialogTheme" parent="Theme.Material3.DayNight.Dialog">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorSecondary">@color/secondary</item>
@@ -27,7 +30,7 @@
         <item name="android:divider">?android:dividerHorizontal</item>
     </style>
 
-    <style name="DialogButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+    <style name="DialogButton" parent="@style/Widget.Material3.Button.TextButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_marginStart">16dp</item>

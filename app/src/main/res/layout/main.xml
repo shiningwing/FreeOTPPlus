@@ -23,16 +23,22 @@
 	android:id="@+id/root_view"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:fitsSystemWindows="true"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto">
 	<com.google.android.material.appbar.AppBarLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
+		<com.google.android.material.appbar.CollapsingToolbarLayout
+			style="?attr/collapsingToolbarLayoutLargeStyle"
+			app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/collapsingToolbarLayoutLargeSize">
 		<com.google.android.material.appbar.MaterialToolbar
+			app:layout_collapseMode="pin"
 			android:id="@+id/toolbar"
 			android:layout_width="match_parent"
-			android:layout_height="?attr/actionBarSize"
-			style="@style/Widget.MaterialComponents.Toolbar">
+			android:layout_height="?attr/actionBarSize">
 			<androidx.appcompat.widget.SearchView
 				android:id="@+id/search_view"
 				android:layout_width="wrap_content"
@@ -42,6 +48,7 @@
 				android:iconifiedByDefault="true"
 				style="@style/Widget.AppCompat.SearchView.ActionBar"/>
 		</com.google.android.material.appbar.MaterialToolbar>
+		</com.google.android.material.appbar.CollapsingToolbarLayout>
 	</com.google.android.material.appbar.AppBarLayout>
 	<androidx.core.widget.NestedScrollView
 		android:layout_width="match_parent"
@@ -66,13 +73,13 @@
 		android:paddingBottom="96dp"
 		android:scrollbars="vertical"
 		app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-	<com.google.android.material.floatingactionbutton.FloatingActionButton
+	<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 		android:id="@+id/add_token_fab"
+		android:text="@string/add_token"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="bottom|end"
 		android:layout_margin="24dp"
 		android:contentDescription="@string/add_token"
-		app:tint="@android:color/white"
-		app:srcCompat="@drawable/camera"/>
+		app:icon="@drawable/camera"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

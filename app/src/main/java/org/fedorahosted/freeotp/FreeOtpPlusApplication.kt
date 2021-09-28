@@ -2,6 +2,7 @@ package org.fedorahosted.freeotp
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
+import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.HiltAndroidApp
 import org.fedorahosted.freeotp.util.Settings
 import javax.inject.Inject
@@ -17,5 +18,6 @@ class FreeOtpPlusApplication: Application() {
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
         }
+        DynamicColors.applyToActivitiesIfAvailable(this);
     }
 }

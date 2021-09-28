@@ -3,7 +3,7 @@ object Versions {
     const val HILT = "2.38.1"
     const val APP_COMPAT = "1.3.1"
     const val ACTIVITY_KTX = "1.3.1"
-    const val MATERIAL = "1.4.0"
+    const val MATERIAL = "1.5.0-alpha03"
     const val CORE_KTX = "1.6.0"
     const val KOTLINX_COROUTINES = "1.5.1"
     const val LIFECYCLE_KTX = "2.3.1"
